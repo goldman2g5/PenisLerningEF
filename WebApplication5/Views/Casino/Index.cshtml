@@ -1,6 +1,5 @@
-﻿@*
-    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
-*@
+﻿<h1>Очки: @ViewBag.Count</h1>
+
 @{  
     List<string> GetImages()
     {
@@ -18,7 +17,7 @@
     
     @foreach (var item in GetImages())
     {
-        <div class="square"><img src=@item onclick="alert('@item')" /></div>
+        <div class="square"><img src=@item onclick="sendData(1)" /></div>
     }
 
 </div>
