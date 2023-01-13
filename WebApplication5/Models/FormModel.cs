@@ -5,23 +5,16 @@ using static WebApplication5.Models.FormModel;
 
 namespace WebApplication5.Models
 {
+    [BindProperties]
     public class FormModel : PageModel
     {
-
-        [BindProperty] public string Name { get; set; }
-        [BindProperty] public string Surname { get; set; }
-        [BindProperty] public string Age { get; set; }
-        [BindProperty]
-        public string City { get; set; }
-
-        public void OnPost()
+        public FormModel()
         {
-            ViewData["sentence"] = $"{Name} {Surname}, {Age} lives in {City}.";
+            Name = "";
+            Surname = "";
         }
+        public string Name { get; set; }
+        public string Surname { get; set; }
 
-        public void OnGet()
-        {
-            ViewData["sentence"] = "";
-        }
     }
 }
