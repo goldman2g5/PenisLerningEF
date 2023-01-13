@@ -1,3 +1,7 @@
 ﻿function sendData(zifra) {
-    $.post("/Casino", { x: "HUI" });
+
+    var jopa = "Nuhai bebru"
+
+    $.post("/Casino/ActionName", { data: jopa});
+
 }
