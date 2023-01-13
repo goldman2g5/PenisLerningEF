@@ -17,10 +17,11 @@ namespace WebApplication5.Controllers
         }
 
         [HttpPost]
-        public IActionResult Index(int data = 0)
+        public IActionResult Index(string data)
         {
+
             Count++;
-            Console.WriteLine(Count);
+            Console.WriteLine(String.IsNullOrEmpty(data));
             return View();
         }
     }
